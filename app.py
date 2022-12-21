@@ -3,7 +3,6 @@ from bot import generate_image
 from bot import image_to_bytes
 import base64
 import os
-import jinja2
 from google_trans_new import google_translator
 
 
@@ -21,12 +20,6 @@ text = ''
 @app.route('/')
 def index():
     return render_template('index.html')
-
-# @app.route("/gen", methods=['POST'])
-# def gen():
-#     if request.method == 'POST':
-#         text = request.form["description"]
-#         return 200
     
 
 @app.route('/test', methods=['GET', 'POST'])
