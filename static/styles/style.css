@@ -10,8 +10,8 @@ body{
 
 .section__title{
     left: 50%;
-    top: 46%;
-    transform: translate(-50%, -46%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     position: fixed;
     text-align: center;
     color: white;
@@ -20,6 +20,7 @@ body{
     font-size: 65px;
     transition: 0.2s;
     font-family: ArchivoBlack;
+    margin: 0;
 }
 
 .section__input
@@ -62,8 +63,8 @@ body{
 
 .section__image{
     position: relative;
-    margin-left: 50%;
-    margin-top: 50%;
+    left: 50%;
+    top: 280px;
     transform: translate(-50%, -50%);
     display: none;
     border: 0px solid #7fb59700;
@@ -75,8 +76,17 @@ body{
 }
 
 .section__image__desc{
-    position: relative;
-    display: none;
+    margin: 0;
+    bottom: 20px;
+    position: fixed;
+    display: block;
+    width: 90%;
+    font-size: 44px;
+    color: #7fb597;
+    font-family: ArchivoBlack;
+    transition: 0.4s;
+    text-align: center;
+    opacity: 0;
 }
 
 @keyframes off{
@@ -99,8 +109,8 @@ body{
 
 @keyframes ready{
     100%{
-        width: 40%;
-        height: 70%;
+        width: 550px;
+        height: 600px;
         border: 0px solid #7fb59700;
     }
 }
@@ -108,7 +118,7 @@ body{
 @keyframes imageShow{
     100%{
         width: 80%;
-        height: 80%;
+        height: auto;
         opacity: 1;
         border: 20px solid #7fb597;
     }

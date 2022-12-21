@@ -45,8 +45,8 @@ function submitImage(){
     }).then(function (text) {
         section__input.style.animation = 'ready 0.4s';
         setTimeout(() => {
-            section__input.style.width = 40 + '%';
-            section__input.style.height = 70 + '%';
+            section__input.style.width = 550 + 'px';
+            section__input.style.height = 600 + 'px';
             section__input.style.border='0px solid #7fb59700';
         }, 400);
 
@@ -56,12 +56,13 @@ function submitImage(){
             image.style.display = 'block';
             image.style.opacity = 1;
             image.style.width = 80 + '%';
-            image.style.height = 80 + '%';
+            image.style.height ='auto';
             image.style.border = "20px solid #7fb597";
         }, 300);
 
-        // image__desc.style.display = "table";
-        // image__desc.innerHTML = '"' + inpValue + '"';
+        image__desc.style.display = "block";
+        image__desc.innerHTML = '"' + inpValue + '"';
+        image__desc.style.opacity = 1;
     });
 }
 
@@ -77,13 +78,13 @@ function animations(){
     section__title.style.opacity = (y / 100) * -1 + 1
     if(y > 254) {
         section__input.style.padding = 1 + "%";
-        section__input.style.width = 60 + "%";
+        section__input.style.width = 900 + "px";
         section__input.style.zIndex = 10;
         section__input.style.opacity = 1;
     }
     else {
         section__input.style.padding = 0 + "%";
-        section__input.style.width = 0 + "%";
+        section__input.style.width = 900 + "px";
         section__input.style.zIndex = -1;
         section__input.style.opacity = 0;
     }
