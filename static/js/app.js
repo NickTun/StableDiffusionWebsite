@@ -6,8 +6,13 @@ const section__title = document.querySelector(".section__title");
 const formgroup__input = document.querySelector(".form-group__input");
 const image = document.querySelector('.section__image');
 const image__desc = document.querySelector('.section__image__desc');
+const wrapper = document.querySelector('.wrapper');
+const tryagain = document.querySelector('.section__tryagain');
+const download = document.querySelector('.section__download');
 
 animations();
+
+imagesource = '';
 
 window.addEventListener('scroll', () => {
     animations();
@@ -18,6 +23,16 @@ function makeJSON(str) {
    obj.text = str;
    return JSON.stringify(obj);
 }
+
+download.addEventListener('click', () =>{
+    console.log('download');
+    const link = document.createElement('a')
+    link.href = imagesource;
+    link.download = 'image.jpeg'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+})
 
 function handleForm(event) { event.preventDefault(); } 
 function submitImage(){
@@ -50,7 +65,8 @@ function submitImage(){
             section__input.style.border='0px solid #7fb59700';
         }, 400);
 
-        image.src = text.image;
+        imagesource = text.image;
+        image.src = imagesource;
         image.style.animation = 'imageShow 0.3s';
         setTimeout(() => {
             image.style.display = 'block';
@@ -60,9 +76,13 @@ function submitImage(){
             image.style.border = "20px solid #7fb597";
         }, 300);
 
-        image__desc.style.display = "block";
-        image__desc.innerHTML = '"' + inpValue + '"';
-        image__desc.style.opacity = 1;
+        setTimeout(() => {
+            wrapper.style.display = 'block';
+            tryagain.style.display = 'block';
+            download.style.display = 'block';
+            image__desc.innerHTML = '"' + inpValue + '"';
+            image__desc.style.display = "block";
+        }, 400);
     });
 }
 

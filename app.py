@@ -35,7 +35,6 @@ def testfn():
         data = request.get_json()
         finaldata = data["text"]
 
-        print(finaldata)
         im, seed = generate_image(translator.translate(finaldata, lang_tgt='en'))
     
         str_eq_img = base64.b64encode(image_to_bytes(im).getvalue()).decode('UTF-8')

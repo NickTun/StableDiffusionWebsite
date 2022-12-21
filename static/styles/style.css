@@ -76,17 +76,82 @@ body{
 }
 
 .section__image__desc{
+    animation: fadein 0.8s;
     margin: 0;
     bottom: 20px;
     position: fixed;
-    display: block;
+    display: none;
     width: 90%;
     font-size: 44px;
     color: #7fb597;
     font-family: ArchivoBlack;
     transition: 0.4s;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
+}
+
+.section__download{
+    display: none;
+    position: fixed;
+    height: 200px;
+    width: 251px;
+    float: left;
+    left: -40px;
+    background: #C8F6E0;
+    transition: 0.4s;
+    transform: translate(0%, -50%);
+    animation: download 0.4s;
+}
+
+.section__download:hover{
+    cursor: pointer;
+    left: -260px;
+    height: 70px;
+}
+
+.section__tryagain{
+    display: none;
+    position: fixed;
+    height: 200px;
+    width: 251px;
+    float: right;
+    right: -40px;
+    background: #C8F6E0;
+    transition: 0.4s;
+    transform: translate(0%, -50%);
+    animation: tryagain 0.4s;
+}
+
+.section__tryagain:hover{
+    cursor: pointer;
+    right: -260px;
+    height: 70px;
+}
+
+.wrapper{
+    position: fixed;
+    width: 550px;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    display: none;
+    transition: 0.4s;
+    transform: translate(-50%, 0%);
+    animation: fadein 0.8s;
+}
+
+h3{
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: 32px;
+    color: #7fb597;
+    font-family: ArchivoBlack;
+    transition: 0.4s;
+    text-align: center;
 }
 
 @keyframes off{
@@ -149,6 +214,36 @@ body{
         width: 100px;
         height: 100px;
         border: 20px solid #7fb597;
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes download {
+    0%{
+        left: 0px;
+    }
+
+    100%{
+        left: -40px;
+    }
+}
+
+@keyframes tryagain {
+    0%{
+        right: 0px;
+    }
+
+    100%{
+        right: -40px;
     }
 }
 
