@@ -13,6 +13,12 @@ window.addEventListener('scroll', () => {
     animations();
 })
 
+function makeJSON(str) {
+   var obj = new Object;
+   obj.text = str;
+   return JSON.stringify(obj);
+}
+
 function handleForm(event) { event.preventDefault(); } 
 function submitImage(){
     section__title.style.display = 'none';
@@ -32,7 +38,7 @@ function submitImage(){
         'Accept': 'application/json',
         'Content-Type': 'application/json'
         },
-        body: inpValue
+        body: makeJSON(inpValue)
     })
     .then(async function (response) {
         return await response.json();
