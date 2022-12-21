@@ -1,0 +1,147 @@
+@font-face {
+    font-family: ArchivoBlack;
+    src: url("ArchivoBlack-Regular.ttf");
+}
+body{
+    height: 1500px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.section__title{
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -46%);
+    position: fixed;
+    text-align: center;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    transition: 0.2s;
+    font-family: ArchivoBlack;
+}
+
+.section__input
+{
+    border-color: #7fb597;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    transition: 0.4s;
+    padding: 0%;
+    width: 0%;
+    background: #C8F6E0;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
+    font-family: ArchivoBlack;
+}
+
+/* .section__input:hover{
+    background: #ccffe5;
+} */
+
+::placeholder {
+    font-size: 44px;
+    color: #ade0c4;
+    text-align: center;
+}
+.form-group__input{
+    width: 90%;
+    font-size: 44px;
+    background: none;
+    border: none;
+    color: #7fb597;
+    font-family: ArchivoBlack;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.section__image{
+    position: relative;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border: 0px solid #7fb59700;
+    text-align: center;
+    transition: 0.4s;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+}
+
+.section__image__desc{
+    position: relative;
+    display: none;
+}
+
+@keyframes off{
+    100%{
+        padding: 0%;
+        opacity: 0;
+        z-index: -1;
+        width: 0%;
+    }
+}
+
+@keyframes on{
+    100% { 
+        padding: 1%;
+        opacity: 1;
+        z-index: 10;
+        width: 60%;
+    }
+}
+
+@keyframes ready{
+    100%{
+        width: 40%;
+        height: 70%;
+        border: 0px solid #7fb59700;
+    }
+}
+
+@keyframes imageShow{
+    100%{
+        width: 80%;
+        height: 80%;
+        opacity: 1;
+        border: 20px solid #7fb597;
+    }
+}
+
+@keyframes load{
+    0%{
+        width: 100px;
+        height: 100px;
+        border: 20px solid #7fb597;
+    }
+    25%{
+        width: 200px;
+        height: 200px;
+        border: 0px solid #7fb59700;
+    }
+    50%{
+        width: 100px;
+        height: 100px;
+        border: 20px solid #7fb597;
+    }
+    75%{
+        width: 200px;
+        height: 200px;
+        border: 0px solid #7fb59700;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+        border: 20px solid #7fb597;
+    }
+}
+
+input:focus{
+    outline: none;
+}
