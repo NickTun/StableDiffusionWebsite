@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify, json
-from ai import generate_image
-from ai import image_to_bytes
+from ai import generate_image, image_to_bytes
 import base64
 import os
 from google_trans_new import google_translator
