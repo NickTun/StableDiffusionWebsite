@@ -8,10 +8,6 @@ from dotenv import load_dotenv
 from io import BytesIO
 import random
 
-from google_trans_new import google_translator
-
-translator = google_translator()
-
 load_dotenv()
 MODEL_DATA = os.getenv('MODEL_DATA', 'runwayml/stable-diffusion-v1-5')
 LOW_VRAM_MODE = (os.getenv('LOW_VRAM', 'true').lower() == 'true')
