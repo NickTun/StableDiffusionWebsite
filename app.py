@@ -35,3 +35,4 @@ def testfn():
         message = {'image':img_tag}
         return jsonify(message)
 
+app.run()
